@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form action="{% url 'Day05:register'%}" method="post" style="text-align: center;margin: 0 auto">
+    {% csrf_token %}
+    <input type="text" placeholder="用户名" name="name">
+    <br>
+    <input type="password" name="pwd" placeholder="密码">
+    <br>
+    <input type="password" name="confirm_pwd" placeholder="确认密码">
+    <br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>

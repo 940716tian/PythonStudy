@@ -1,0 +1,1466 @@
+2018-10-31 14:59:55,348 [Dummy-1:140354245650176] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-31 14:59:55,351 [Dummy-1:140354245650176] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2018-10-31 14:59:55,420 [Dummy-1:140354245650176] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2018-10-31 14:59:55,426 [Dummy-1:140354245650176] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-31 15:00:23,901 [Thread-2:140354162521856] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:00:23,907 [Thread-2:140354162521856] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:00:23,916 [Thread-2:140354162521856] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:00:25,512 [Thread-5:140354145736448] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'app08/send_verify_mail', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^easy_send$>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^html_send$>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^file_send$>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^many_send$>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^register$>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^verify/(.*)>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>, <RegexURLPattern None ^test$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:00:25,518 [Thread-5:140354145736448] [django.server:124] [basehttp:log_message] [WARNING]- "GET /app08/send_verify_mail HTTP/1.1" 404 3151
+2018-10-31 15:00:25,851 [Thread-6:140354137343744] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:00:25,852 [Thread-6:140354137343744] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:00:25,858 [Thread-6:140354137343744] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:00:35,165 [Thread-9:140354137343744] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 15:00:35,167 [Thread-9:140354137343744] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 15:00:35,261 [Thread-10:140354137343744] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:00:35,262 [Thread-10:140354137343744] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:00:35,264 [Thread-10:140354137343744] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:49:07,346 [Dummy-1:140298172528384] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-31 15:49:07,348 [Dummy-1:140298172528384] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2018-10-31 15:49:07,432 [Dummy-1:140298172528384] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2018-10-31 15:49:07,442 [Dummy-1:140298172528384] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-31 15:49:12,747 [Thread-4:140298145179392] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 344
+2018-10-31 15:49:13,040 [Thread-5:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:49:13,042 [Thread-5:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:49:13,044 [Thread-5:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:49:28,064 [Thread-7:140297925293824] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:49:28,078 [Thread-7:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:50:09,122 [Thread-10:140298145179392] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 344
+2018-10-31 15:50:09,465 [Thread-11:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:50:09,466 [Thread-11:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:50:09,469 [Thread-11:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:50:23,653 [Thread-13:140297925293824] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:50:23,657 [Thread-13:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:50:59,034 [Thread-16:140297925293824] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:50:59,043 [Thread-16:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:50:59,081 [Thread-17:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:50:59,083 [Thread-17:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:50:59,090 [Thread-17:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:50:59,940 [Thread-19:140298145179392] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:50:59,958 [Thread-19:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:50:59,992 [Thread-18:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:51:00,006 [Thread-18:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:51:00,023 [Thread-18:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:51:00,258 [Thread-21:140298145179392] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:51:00,262 [Thread-21:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:51:00,302 [Thread-20:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:51:00,305 [Thread-20:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:51:00,313 [Thread-20:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:51:03,329 [Thread-23:140298145179392] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:51:03,336 [Thread-23:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:51:03,392 [Thread-22:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:51:03,394 [Thread-22:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:51:03,400 [Thread-22:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:51:11,996 [Thread-27:140298145179392] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:51:12,004 [Thread-27:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 15:51:12,027 [Thread-26:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:51:12,029 [Thread-26:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:51:12,030 [Thread-26:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:51:17,024 [Thread-28:140297925293824] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 472
+2018-10-31 15:51:17,279 [Thread-29:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:51:17,280 [Thread-29:140297925293824] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:51:17,286 [Thread-29:140297925293824] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:51:24,024 [Thread-30:140297925293824] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 11
+2018-10-31 15:52:47,251 [Thread-34:140298145179392] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 11
+2018-10-31 15:52:56,519 [Thread-37:140297925293824] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 345
+2018-10-31 15:52:56,789 [Thread-38:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 15:52:56,791 [Thread-38:140298145179392] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 15:52:56,793 [Thread-38:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 15:53:07,566 [Thread-39:140298145179392] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 15:53:07,571 [Thread-39:140298145179392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 2497
+2018-10-31 16:02:06,216 [Dummy-1:139804137170688] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-31 16:02:06,218 [Dummy-1:139804137170688] [django.db.backends:91] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2018-10-31 16:02:06,266 [Dummy-1:139804137170688] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2018-10-31 16:02:06,273 [Dummy-1:139804137170688] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-31 19:21:42,476 [Thread-2:139804126607104] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 19:21:42,484 [Thread-2:139804126607104] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 19:21:42,488 [Thread-2:139804126607104] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 19:21:44,312 [Thread-5:139804107372288] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:21:44,314 [Thread-5:139804107372288] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:21:44,648 [Thread-6:139804107372288] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-10-31 19:21:44,653 [Thread-6:139804107372288] [django.template:925] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app08.urls' from '/home/xiao_hu/study/day08/app08/urls.py'> (None:blla) ^app08/>"
+2018-10-31 19:21:44,658 [Thread-6:139804107372288] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2075
+2018-10-31 19:22:39,344 [Thread-9:139804126607104] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:22:39,347 [Thread-9:139804126607104] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:22:45,208 [Thread-10:139804098979584] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:22:45,208 [Thread-10:139804098979584] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:23:20,716 [Thread-14:139804126607104] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:23:20,717 [Thread-14:139804126607104] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:23:23,904 [Thread-13:139804098979584] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:23:23,905 [Thread-13:139804098979584] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:23:27,511 [Thread-16:139804126607104] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:23:27,512 [Thread-16:139804126607104] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:28:04,967 [Dummy-1:140636086175488] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-31 19:28:04,974 [Dummy-1:140636086175488] [django.db.backends:91] [utils:execute] [DEBUG]- (0.003) SELECT VERSION(); args=None
+2018-10-31 19:28:05,065 [Dummy-1:140636086175488] [django.db.backends:91] [utils:execute] [DEBUG]- (0.008) SHOW FULL TABLES; args=None
+2018-10-31 19:28:05,089 [Dummy-1:140636086175488] [django.db.backends:91] [utils:execute] [DEBUG]- (0.011) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-31 19:28:35,753 [Thread-4:140661614184192] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:28:35,753 [Thread-4:140661614184192] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:28:35,753 [Thread-4:140661614184192] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:28:37,594 [Thread-4:140661614184192] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/test HTTP/1.1" 500 27
+2018-10-31 19:28:37,794 [Thread-5:140661605791488] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:28:46,701 [Thread-8:140661605791488] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:28:46,703 [Thread-8:140661605791488] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:28:46,703 [Thread-8:140661605791488] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:28:47,980 [Thread-8:140661605791488] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/test HTTP/1.1" 500 27
+2018-10-31 19:28:48,148 [Thread-9:140661614184192] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:29:11,815 [Thread-10:140661614184192] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:29:11,816 [Thread-10:140661614184192] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:29:11,816 [Thread-10:140661614184192] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:29:15,369 [Thread-10:140661614184192] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/test HTTP/1.1" 500 27
+2018-10-31 19:29:15,456 [Thread-11:140661605791488] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:31:13,059 [Thread-1:139770347493120] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:31:13,060 [Thread-1:139770347493120] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:31:13,060 [Thread-1:139770347493120] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:31:14,684 [Thread-1:139770347493120] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/test HTTP/1.1" 500 27
+2018-10-31 19:31:28,366 [Thread-4:139770339100416] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:31:28,367 [Thread-4:139770339100416] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:31:28,367 [Thread-4:139770339100416] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/test
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 17, in test
+    1/0
+ZeroDivisionError: division by zero
+2018-10-31 19:31:30,313 [Thread-4:139770339100416] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/test HTTP/1.1" 500 27
+2018-10-31 19:32:35,531 [Thread-1:140508244473600] [django:16] [views:test] [INFO]- 尼玛
+2018-10-31 19:32:35,532 [Thread-1:140508244473600] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/test HTTP/1.1" 200 6
+2018-10-31 19:44:07,688 [Thread-4:140508236080896] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:44:13,336 [Thread-7:140508225500928] [django.server:124] [basehttp:log_message] [WARNING]- "GET /app08html_send HTTP/1.1" 404 88
+2018-10-31 19:44:13,523 [Thread-8:140508225500928] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:44:36,807 [Thread-4:139987090315008] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:44:37,103 [Thread-5:139986875709184] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 19:45:08,733 [Thread-4:139928101889792] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:45:08,776 [Thread-4:139928101889792] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/html_send HTTP/1.1" 500 59
+2018-10-31 19:45:09,383 [Thread-6:139927872194304] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:45:09,385 [Thread-6:139927872194304] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/html_send HTTP/1.1" 500 59
+2018-10-31 19:45:12,167 [Thread-5:139927880587008] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:47:03,503 [Thread-5:140037937161984] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:48:51,538 [Thread-9:140037919889152] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:49:57,057 [Thread-12:140038160217856] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:57:06,063 [Thread-17:140038160217856] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 19:58:32,102 [Thread-21:140038160217856] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 20:01:32,575 [Thread-1:139631173072640] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 20:01:33,788 [Thread-6:139631145445120] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 345
+2018-10-31 20:01:33,856 [Thread-5:139631154099968] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 20:01:47,681 [Thread-8:139631145445120] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 16
+2018-10-31 20:02:17,636 [Thread-9:139631173072640] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 345
+2018-10-31 20:02:17,745 [Thread-10:139631162492672] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 85
+2018-10-31 20:04:56,995 [Thread-11:139631154099968] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 21
+2018-10-31 20:05:55,109 [Thread-7:140104341366528] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 472
+2018-10-31 20:06:20,294 [Thread-11:140104383330048] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/cz HTTP/1.1" 200 472
+2018-10-31 20:09:26,591 [Thread-3:140071864190720] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 12
+2018-10-31 20:09:33,187 [Thread-1:140071872583424] [django.server:124] [basehttp:log_message] [INFO]- "POST /app08/cz HTTP/1.1" 200 12
+2018-10-31 20:10:17,589 [Thread-1:140072593139456] [django.security.csrf:160] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /app08/cz
+2018-10-31 20:10:17,601 [Thread-1:140072593139456] [django.server:124] [basehttp:log_message] [WARNING]- "POST /app08/cz HTTP/1.1" 403 998
+2018-10-31 20:41:09,199 [Thread-1:140516648879872] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/html_send HTTP/1.1" 200 6
+2018-10-31 20:48:02,623 [Thread-1:140168193980160] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/file_send HTTP/1.1" 200 4
+2018-10-31 20:53:55,484 [Thread-1:140317310928640] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:53:55,484 [Thread-1:140317310928640] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:53:58,816 [Thread-1:140317310928640] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 20:54:49,517 [Thread-1:139656337893120] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:54:49,517 [Thread-1:139656337893120] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:54:54,672 [Thread-1:139656337893120] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 20:55:30,874 [Thread-1:140130086024960] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:55:30,874 [Thread-1:140130086024960] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:55:34,832 [Thread-1:140130086024960] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 20:55:54,358 [Thread-1:140672661190400] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:55:54,358 [Thread-1:140672661190400] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 61, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS,"static")
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/posixpath.py", line 89, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/genericpath.py", line 143, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+2018-10-31 20:55:55,914 [Thread-1:140672661190400] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 20:59:09,073 [Thread-1:140398828275456] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 60, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS[0,2],["timg","timg1"])
+TypeError: list indices must be integers or slices, not tuple
+2018-10-31 20:59:09,073 [Thread-1:140398828275456] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 60, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS[0,2],["timg","timg1"])
+TypeError: list indices must be integers or slices, not tuple
+2018-10-31 20:59:10,546 [Thread-1:140398828275456] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 20:59:15,351 [Thread-3:140398819882752] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 60, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS[0,2],["timg","timg1"])
+TypeError: list indices must be integers or slices, not tuple
+2018-10-31 20:59:15,351 [Thread-3:140398819882752] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /app08/file_send
+Traceback (most recent call last):
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/xiao_hu/.local/virtualenvs/vir3.5/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xiao_hu/study/day08/app08/views.py", line 60, in file_email
+    file_path = os.path.join(settings.STATICFILES_DIRS[0,2],["timg","timg1"])
+TypeError: list indices must be integers or slices, not tuple
+2018-10-31 20:59:20,095 [Thread-3:140398819882752] [django.server:124] [basehttp:log_message] [ERROR]- "GET /app08/file_send HTTP/1.1" 500 27
+2018-10-31 21:26:57,478 [Thread-1:140119560722176] [django.server:124] [basehttp:log_message] [INFO]- "GET /app08/register HTTP/1.1" 200 34

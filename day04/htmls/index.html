@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+{#    <a href="/app04/langs">查看说有语言</a>#}
+    <a href="{% url 'python1806:lele'  %}">查看说有语言</a>
+    <a href="http://www.baidu.com">去百度</a>
+    <a href="{% url 'python1806:myindex' 2 %}">查看语言</a>
+    <a href="{% url 'python1806:v1index' p2=1%}">查看语言v1</a>
+</body>
+</html>

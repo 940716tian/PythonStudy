@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for foo in langs %}
+            {% if forloop.first %}
+                 <li style="color: aqua">{{ forloop.counter0 }}我喜欢的语言有{{ foo.name }}原因是{{ foo.desc }}</li>
+                {% elif forloop.last %}
+                 <li style="text-decoration: line-through">{{ forloop.counter0 }}我喜欢的语言有{{ foo.name }}原因是{{ foo.desc }}</li>
+                {% else %}
+                 <li >{{ forloop.counter0 }}我喜欢的语言有{{ foo.name }}原因是{{ foo.desc }}</li>
+            {% endif %}
+
+
+            {% empty %}
+            <h1>空空如也</h1>
+            <h2>赶快去找吧</h2>
+        {% endfor %}
+    </ul>
+    <hr>
+    第一个语言是{{ langs.0.name }}
+    <br>
+    调用函数{{ langs.1.get_desc }}
+    <br>
+    {% if langs.0.name == "pythona" %}
+        第一个是Python
+        {% else %}
+            <li>qewqer</li>
+            <li>qwer</li>
+
+    {% endif %}
+</body>
+</html>

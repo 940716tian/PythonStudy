@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    欢迎{{ user_name }}
+    <br>
+    <a href="{% url 'Day05:mylogin' %}">登录</a>
+    <a href="{% url 'Day05:register' %}">注册</a>
+    <a href="/app05plus/logout">退出</a>
+</body>
+</html>

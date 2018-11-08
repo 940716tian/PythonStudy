@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <form attions="{% url 'ball:login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="输入用户名或者手机号" name="user_info">
+        <br>
+        <input type="password" placeholder="密码" name="pwd">
+        <br>
+        <input type="submit" value="登录">
+
+    </form>
+</body>
+</html>

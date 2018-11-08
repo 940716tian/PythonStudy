@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<ul>
+    {% for d in data %}
+        <li>{{ d.name }}的年纪是{{ d.age }}</li>
+        {% empty %}
+        <h1>没哟数据</h1>
+    {% endfor %}
+</ul>
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+{#判断是否有前一页的数据#}
+        <li>
+            {% if page.has_previous %}
+                <a href="/app07/data?page={{ page.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span>
+                </a>
+            {% else %}
+                <a href="/app07/data?page=1" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span>
+                </a>
+            {% endif %}
+        </li>
+{#判断是否有后一页的数据#}
+        {% for foo in page_range %}
+            <li><a href="/app07/data?page={{ foo }}">{{ foo }}</a></li>
+
+        {% endfor %}
+
+        <li>
+            {% if page.has_next %}
+                <a href="/app07/data?page={{ page.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">下一页</span>
+                </a>
+            {% else %}
+                <a href="/app07/data?page={{ page_count }}" aria-label="Next">
+                    <span aria-hidden="true">下一页</span>
+                </a>
+            {% endif %}
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
+{#总结:前端需要的数据是我们要返回给前端数据的依据(人家要啥 咱给啥)  #}
+{# 当我们在查询或处理数据的时候 我们后端无法确定的数据 需要通过参数的形式让前端告诉我们#}
